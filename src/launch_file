@@ -1,0 +1,31 @@
+
+Esercizio 3
+
+    File .py per movimento robot
+
+        ros2 run meccatronics_py ros2_goforward
+
+    Laucnh file burger in gazebo:
+
+        export TURTLEBOT3_MODEL=burger
+    
+        ros2 launch turtlebot3_gazebo empty_world.launch.py
+
+        Move to [x, y]
+            ros2 run meccatronics_py es3_task_1 --ros-args -p goal_x:=1.0 -p goal_y:=-2.0
+
+        Move to [x, y , theta]
+            ros2 run meccatronics_py es3_task_1 --ros-args -p goal_x:=1.0 -p goal_y:=2.0 -p goal_theta:=1.57
+
+        Path hard-coded
+            ros2 run meccatronics_py follow_path_pid -ros-args --params-file /path/square_path.yaml
+        
+        
+
+Part 3 ( grade 5)
+
+    ros2 bag record /odom /cmd_vel /control_errors
+
+    rqt_plot
+
+    rqt_console
